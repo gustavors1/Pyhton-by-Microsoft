@@ -92,3 +92,29 @@ planet.update({
 
 print(f'{planet["name"]} has a polar circumference of {planet["circumference (km)"]["polar"]}')
 
+"Recuperación de todas las claves y valores"
+
+""" El método keys() devuelve un objeto de lista que contiene todas las claves. 
+Puede usar este método para iterar por todos los elementos del diccionario. """
+
+rainfall = {
+    'october': 3.5,
+    'november': 4.2,
+    'december': 2.1
+}
+for key in rainfall.keys():
+    print(f'{key}: {rainfall[key]}cm')
+
+""" Determinación de la existencia de una clave en un diccionario """
+
+""" Al actualizar un valor en un diccionario, 
+Python sobrescribirá el valor existente o creará uno, si la clave no existe. 
+Si quiere agregar a un valor en lugar de sobrescribirlo, 
+puede comprobar si la clave existe mediante in."""
+
+if 'december' in rainfall:
+    rainfall['december'] = rainfall['december'] + 1
+else:
+    rainfall['december'] = 1
+
+# Because december exists, the value will be 3.1
